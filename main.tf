@@ -4,7 +4,7 @@
 
 resource "aws_instance" eks_worker_node {
     ami             = "ami-0180d9f82588d5224"
-    instance_type   = var.instance_type
+    instance_type   = "r5.xlarge"
     subnet_id       = var.subnet_id
     host_id         = var.dedicated_host_id
     count           = var.worker_count
